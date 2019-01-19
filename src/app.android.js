@@ -4,6 +4,8 @@ import { Navigation } from 'react-native-navigation';
 
 import { registerScreens } from './screens';
 import configureStore from './store/configureStore';
+import { iconsMap, iconsLoaded } from './utils/AppIcons';
+import SignInIcon from './utils/sign_in.png';
 
 const store = configureStore();
 
@@ -21,22 +23,21 @@ const navigatorStyle = {
 	tabBarBackgroundColor: 'white'
 };
 
-Navigation.startSingleScreenApp({
-	screen: {
-		screen: 'movieapp.Movies',
-		title: 'Movies',
-		navigatorStyle,
-		navigatorButtons: {
-			leftButtons: [
-				{
-					id: 'sideMenu'
-				}
-			]
+Navigation.startTabBasedApp({
+	tabs: [
+		{
+			label: 'Sign In',
+			screen: 'movieapp.Movies',
+			icon: SignInIcon,
+			title: 'Hello World',
+			navigatorStyle
+		},
+		{
+			label: 'Sign Up',
+			screen: 'movieapp.Test',
+			icon: SignInIcon,
+			title: 'Cadastrar',
+			navigatorStyle
 		}
-	},
-	drawer: {
-		left: {
-			screen: 'movieapp.Drawer'
-		}
-	}
+	]
 });

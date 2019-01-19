@@ -24,7 +24,7 @@ class Movies extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<Text style={styles.welcome}>Welcome</Text>
+				<Text style={styles.welcome}>Lucky Dives</Text>
 			</View>
 		);
 	}

@@ -36,11 +36,19 @@ class App extends Component {
 		Navigation.startTabBasedApp({
 			tabs: [
 				{
-					label: 'Movies',
+					label: 'Sign In',
 					screen: 'movieapp.Movies',
 					icon: iconsMap['ios-film-outline'],
 					selectedIcon: iconsMap['ios-film'],
 					title: 'Hello World',
+					navigatorStyle
+				},
+				{
+					label: 'Sign Up',
+					screen: 'movieapp.Test',
+					icon: iconsMap['ios-film-outline'],
+					selectedIcon: iconsMap['ios-film'],
+					title: 'Cadastrar',
 					navigatorStyle
 				}
 			]
